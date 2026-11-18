@@ -38,10 +38,10 @@ export function Carousel({ label, perView = 1, className = "", children }) {
   return (
     <div className={`carousel ${className}`} role="region" aria-roledescription="carousel" aria-label={label} style={{ "--per-view": perView }}>
       <button type="button" className="carousel__arrow carousel__arrow--prev" aria-label="Previous slide" hidden={edge.start} onClick={() => step(-1)}>
-        <span className="glyph" aria-hidden="true" style={{ "--glyph": "url(assets/icons/caret-left.svg)", "--size": "24px" }} />
+        <span className="glyph" aria-hidden="true" style={{ "--glyph": `url(${new URL("assets/icons/caret-left.svg", document.baseURI)})`, "--size": "24px" }} />
       </button>
       <button type="button" className="carousel__arrow carousel__arrow--next" aria-label="Next slide" hidden={edge.end} onClick={() => step(1)}>
-        <span className="glyph" aria-hidden="true" style={{ "--glyph": "url(assets/icons/caret-right.svg)", "--size": "24px" }} />
+        <span className="glyph" aria-hidden="true" style={{ "--glyph": `url(${new URL("assets/icons/caret-right.svg", document.baseURI)})`, "--size": "24px" }} />
       </button>
       <ul className="carousel__track" ref={track}>
         {children}

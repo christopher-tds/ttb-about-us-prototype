@@ -6,8 +6,10 @@ import { FOOTER } from "../brand.js";
 // 820: logo 120 × 46; subscribe beside chat + contact; three columns below; legal centered. 48px margins.
 // 393: logo centered between two rules; everything stacked; chat + contact side by side. 20px margins.
 // Icons are Phosphor Regular (C16), drawn as masks so they take the text color; the live site uses its own set.
+// Mask URLs are absolute (from the page URL): a relative url() in a custom property resolves against the
+// stylesheet, which broke them once built (assets/assets/…).
 const glyph = (name, size) => (
-  <span className="glyph" aria-hidden="true" style={{ "--glyph": `url(assets/icons/${name}.svg)`, "--size": `${size}px` }} />
+  <span className="glyph" aria-hidden="true" style={{ "--glyph": `url(${new URL(`assets/icons/${name}.svg`, document.baseURI)})`, "--size": `${size}px` }} />
 );
 const label = (l) => (typeof l === "string" ? { label: l } : l);
 const NewTab = () => <><span className="sr-only"> (opens in a new tab)</span>{glyph("arrow-square-out", 16)}</>;
