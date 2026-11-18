@@ -4,10 +4,13 @@
    and later steps bring sections onto the TB tokens and rules (core + tb.md).
    Live breakpoints used here: sm 600 (columns), sm-md 800 (side margin), md 1000 (type and spacing). */
 
-@font-face { font-family: "TB Belizio"; src: url("/fonts/Belizio-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
-@font-face { font-family: "TB Poynter"; src: url("/fonts/PoynterGothicText.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "TB Poynter"; src: url("/fonts/PoynterGothicTextBold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
-@font-face { font-family: "TB Poynter Condensed"; src: url("/fonts/PoynterGothicTextBoldCondensed.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+/* Brand fonts load from Tie Bar's own Shopify CDN (the same files thetiebar.com serves, CORS open), so the
+   hosted prototype shows them without the licensed files in this repo. The URLs are tied to a storefront deploy
+   (checked 2026-11-18); if they stop resolving, copy the current ones from the live site's styles CSS. */
+@font-face { font-family: "TB Belizio"; src: url("https://cdn.shopify.com/oxygen-v2/26391/10706/22128/5124164/assets/Belizio-Medium-CyxjikAZ.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "TB Poynter"; src: url("https://cdn.shopify.com/oxygen-v2/26391/10706/22128/5124164/assets/PoynterGothicText-Dt4Tu9sd.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "TB Poynter"; src: url("https://cdn.shopify.com/oxygen-v2/26391/10706/22128/5124164/assets/PoynterGothicTextBold-eN0CQRjA.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "TB Poynter Condensed"; src: url("https://cdn.shopify.com/oxygen-v2/26391/10706/22128/5124164/assets/PoynterGothicTextBoldCondensed-BZUVEOTM.woff2") format("woff2"); font-weight: 700; font-display: swap; }
 
 :root {
   --brand-ink: #1e1e1e;

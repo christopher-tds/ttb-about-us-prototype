@@ -25,9 +25,10 @@ const width = (v, label, value) => ({
 });
 
 // Collage parallax: the most each image moves (px) as the collage scrolls through the viewport.
+// Widened 2026-11-18 to 0–400px. Past ~150px the lowest photo can reach "Our Approach" (120px below the collage).
 const drift = (n, value) => ({
   id: `--collage-drift-${n}`, label: `Image ${n}`, value,
-  stops: [0, 4, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96, 120],
+  stops: Array.from({ length: 51 }, (_, i) => i * 8), // 0–400px in 8px steps
   show: (x) => `${x}px`,
   vars: (x) => ({ [`--collage-drift-${n}`]: String(x) }),
 });
@@ -41,7 +42,7 @@ const space = (v, label, value) => ({
 });
 
 const GROUPS = [
-  { name: "Collage parallax (max drift, downward)", rows: [drift(1, 24), drift(2, 48), drift(3, 80), drift(4, 40)] },
+  { name: "Collage parallax (max drift, downward)", rows: [drift(1, 56), drift(2, 80), drift(3, 120), drift(4, 96)] },
 ];
 const ROWS = GROUPS.flatMap((g) => g.rows);
 const DEFAULTS = Object.fromEntries(ROWS.map((r) => [r.id, r.value]));

@@ -19,7 +19,7 @@ npm run dev   # port 5199
 
 - **Measurements:** Live page measured 2026-11-17 at 393, 820 and 1440. Every section's offset matches live within 1px at all three widths.
 - **Copy, alt text and images:** Copied verbatim from live into `src/content.js`. Images load from the Shopify CDN.
-- **Fonts:** Belizio and Poynter load from `public/fonts/`, which is gitignored.
+- **Fonts:** Belizio and Poynter load from Tie Bar's own Shopify CDN, the same files thetiebar.com serves. No font files are in the repo.
 
 ## Step 2 sources
 
@@ -80,9 +80,8 @@ npm run dev   # port 5199
 ## Hosting
 
 - **Repo:** Public, christopher-tds/ttb-about-us-prototype, live at https://christopher-tds.github.io/ttb-about-us-prototype/. A GitHub Action (`.github/workflows/pages.yml`) builds and deploys on every push to `main`.
-- **Fonts:** The licensed font files are gitignored, so the hosted site shows the Roboto fallbacks.
+- **Fonts:** The hosted site loads Belizio and Poynter from Tie Bar's Shopify CDN. The URLs change with storefront deploys; if they stop resolving, text falls back to Roboto until the URLs in `src/styles.css` are updated.
 
 ## Build
 
 - `npm run build` writes `dist/`, a static React build with relative paths.
-- The licensed font files are removed from the output, so text falls back to Roboto and Roboto Slab, the same as the live site's CSS fallbacks.

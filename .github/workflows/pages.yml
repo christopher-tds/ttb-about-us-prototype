@@ -1,5 +1,5 @@
 # Builds the Vite prototype and publishes dist/ to GitHub Pages on every push to main.
-# The licensed brand fonts aren't in the repo, so the hosted site uses the Google fallbacks.
+# Brand fonts load from Tie Bar's Shopify CDN (see src/styles.css); no font files are in the repo.
 name: Deploy to Pages
 on:
   push:
