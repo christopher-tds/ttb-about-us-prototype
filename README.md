@@ -77,6 +77,11 @@ npm run dev   # port 5199
 - **DS instances:** The DS Navigation is inside the 1440 frame. The mobile Navigation and both Footers sit on the canvas directly above or below their frames, because their brand fonts can't be nested through the API.
 - **Colors:** Bound to TTB DS variables (gray-80, gray-30, leaf-dark, coral-dark). brand-ink (#1E1E1E) and the press band (#FAF7F3) are hex values, since no matching DS variable was found.
 
+## Hosting
+
+- **Repo:** Public, christopher-tds/ttb-about-us-prototype, live at https://christopher-tds.github.io/ttb-about-us-prototype/. A GitHub Action (`.github/workflows/pages.yml`) builds and deploys on every push to `main`.
+- **Fonts:** The licensed font files are gitignored, so the hosted site shows the Roboto fallbacks.
+
 ## Build
 
 - `npm run build` writes `dist/`, a static React build with relative paths.
