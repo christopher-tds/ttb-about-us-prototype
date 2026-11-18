@@ -63,7 +63,7 @@ export default function App() {
               <button key={v} type="button" aria-pressed={intro === v} onClick={() => chooseIntro(v)}>{label}</button>
             ))}
           </div>
-          <ViewportSwitcher /><Tuner />
+          <ViewportSwitcher />{/* Tuner: local dev only, never on the published link (2026-11-18). */}{import.meta.env.DEV && <Tuner />}
         </div>
       )}
     </>
