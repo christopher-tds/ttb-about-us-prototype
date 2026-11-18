@@ -13,13 +13,13 @@ import { useEffect, useRef } from "react";
 // [label, height%, left%, top%, width%] as `start + delta * t`, t = clamp((100cqw - 375px) / 1065px, 0, 1).
 // Pixel sizes are the box at 1440 wide (1440 × 1310).
 const LAYERS = [
-  { n: 1, h: [37.5, 5], l: [-52.5, 36.9], t: [0, 0], w: [114, -65.6], drift: 56, tint: "#b2bda3", at1440: "697 × 557",
+  { n: 1, h: [37.5, 5], l: [-52.5, 36.9], t: [0, 0], w: [114, -65.6], drift: 40, tint: "#b2bda3", at1440: "697 × 557",
     photo: { src: "assets/img/collage-1.jpg", crop: [-6.457, -0.539, 112.92], alt: "Tie maker cutting a paper pattern on a workbench with a knife and a steel ruler" } },
-  { n: 2, h: [33.6, 10.8], l: [50, -0.8], t: [15, -4.5], w: [112, -56.6], drift: 80, tint: "#e8d9c0", at1440: "798 × 582",
+  { n: 2, h: [33.6, 10.8], l: [50, -0.8], t: [15, -4.5], w: [112, -56.6], drift: 72, tint: "#e8d9c0", at1440: "798 × 582",
     photo: { src: "assets/img/collage-2.jpg", crop: [-2.502, -1.375, 104.92], alt: "Knit and textured ties laid across a workbench among scissors, a hammer and sewing tools" } },
-  { n: 3, h: [25.4, 15.4], l: [27, 37], t: [71.3, -23.2], w: [94.5, -37.7], drift: 120, tint: "#b9c3cb", at1440: "818 × 535",
+  { n: 3, h: [25.4, 15.4], l: [27, 37], t: [71.3, -23.2], w: [94.5, -37.7], drift: 40, tint: "#b9c3cb", at1440: "818 × 535",
     photo: { src: "assets/img/collage-3.jpg", crop: [-0.944, -14.402, 100.99], alt: "Brown suit, white shirt, tie and black loafers packed in a patterned garment bag" } },
-  { n: 4, h: [48.3, 13.2], l: [-20.6, 16.4], t: [37.5, 1], w: [93.6, -49], drift: 96, tint: "#d9b8a8", at1440: "642 × 806",
+  { n: 4, h: [48.3, 13.2], l: [-20.6, 16.4], t: [37.5, 1], w: [93.6, -49], drift: 104, tint: "#d9b8a8", at1440: "642 × 806",
     photo: { src: "assets/img/collage-4.jpg", crop: [-42.296, -50.13, 179.37], alt: "Man in a dark double-breasted suit, sunglasses and black tie standing in a Chicago alley" } },
 ];
 const T = "clamp(0, (100cqw - 375px) / 1065px, 1)";
@@ -50,7 +50,7 @@ export default function Collage() {
         // Tuner override (temporary): --collage-drift-N on :root, else the default.
         const tuned = parseFloat(rootStyle.getPropertyValue(`--collage-drift-${i + 1}`));
         const drift = Number.isFinite(tuned) ? tuned : LAYERS[i].drift;
-        // Max drift per image, tuned 2026-11-17: 56 / 80 / 120 / 96px. Travel is downward only, from 0 at the page's
+        // Max drift per image, tuned 2026-11-18: 40 / 72 / 40 / 104px. Travel is downward only, from 0 at the page's
         // starting scroll position to full drift as the collage leaves the top, so no photo rises into the space
         // under the intro.
         const px = progress * drift;

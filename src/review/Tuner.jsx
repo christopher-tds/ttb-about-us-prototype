@@ -42,7 +42,7 @@ const space = (v, label, value) => ({
 });
 
 const GROUPS = [
-  { name: "Collage parallax (max drift, downward)", rows: [drift(1, 56), drift(2, 80), drift(3, 120), drift(4, 96)] },
+  { name: "Collage parallax (max drift, downward)", rows: [drift(1, 40), drift(2, 72), drift(3, 40), drift(4, 104)] },
 ];
 const ROWS = GROUPS.flatMap((g) => g.rows);
 const DEFAULTS = Object.fromEntries(ROWS.map((r) => [r.id, r.value]));

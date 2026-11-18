@@ -40,7 +40,7 @@ npm run dev   # port 5199
 - **Geometry:** The same formulas as the reference, interpolated from 375 to 1440. It matches the reference to the pixel at 1440 and 393, and includes a light parallax that's off with reduced motion. The code is in `src/sections/Collage.jsx`.
 - **Figma:** cJWxrGOar5mTGxUzhx4caF, page "About Page - Nov 2026", section "About Us · Collage (image placeholders)" (14381:1306). Components "Collage / Image 1–4" (14383:1307–1310) hold the photos; the 1440 and 393 collages are instances, so each photo is placed once.
 - **Photos (2026-11-17):** Pulled from those components at source size into `public/assets/img/collage-1…4.jpg` (1613 × 1152 landscape, 1152 × 1613 portrait). Each keeps its Figma crop from the 1440 component, and the alt text is new.
-- **Parallax:** Downward only, from where the collage sits on load. Max drift per image is 56 / 80 / 120 / 96px (tuned 2026-11-17), so the lowest photo clears "Our Approach" by at least 27px at 1440 and 35px at 393.
+- **Parallax:** Downward only, from where the collage sits on load. Max drift per image is 40 / 72 / 40 / 104px (tuned 2026-11-18).
 
 ## Fade-up reveals
 
