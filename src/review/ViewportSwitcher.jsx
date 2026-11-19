@@ -7,6 +7,8 @@ const DEVICES = {
   desktop: { label: "Desktop" },
   tablet: { label: "Tablet", w: 820, h: 1180 },
   mobile: { label: "Mobile", w: 393, h: 852 },
+  // Smallest viewport the devs build for (core C12, changed to 360 on 2026-11-19). 393 stays as the everyday phone check.
+  small: { label: "360", w: 360, h: 780 },
 };
 const KEY = "tds-proto-viewport";
 

@@ -50,7 +50,7 @@ npm run dev   # port 5199
 
 ## Contact information
 
-- **Source:** The "Contact Information" block from thetiebar.com/contact (2026-11-17), with the icons removed: Email, Phone, Text and Corporate Headquarters. It sits under the CTA, above the press quotes.
+- **Source:** The "Contact Information" block from thetiebar.com/contact (2026-11-17), with the icons removed: Email, Phone, Text and (since 2026-11-19) the Chicago store address in place of Corporate Headquarters. It sits under the CTA, above the press quotes.
 - **Layout:** Live type. A full-bleed 1px gray-30 rule sits above it, and the rule-to-heading gap matches the last-line-to-press-band gap (68px). The columns sit flush with the heading on an equal grid with 24px gutters: one column, two from 600, four from 1000.
 
 ## In the news block

@@ -58,7 +58,8 @@ const CONTACT = [
   { title: "Email", body: <p>Customer Service:<br /><a className="link" href="mailto:info@thetiebar.com">info@thetiebar.com</a></p> },
   { title: "Phone", body: <p>312-690-2900</p> },
   { title: "Text", body: <p>+1 872-240-5589</p> },
-  { title: "Corporate Headquarters", body: <p>Tie Bar Holdings LLC<br />404 S Wells St,<br />Suite 300<br />Chicago, IL 60607</p> },
+  // Store replaces Corporate Headquarters (2026-11-19). Address from /contact "Store Locations" and /about-our-stores.
+  { title: "Chicago Store", body: <p>The Tie Bar Flagship<br />1007 West Armitage<br />Chicago, IL 60614</p> },
 ];
 
 export function ContactInfo() {
